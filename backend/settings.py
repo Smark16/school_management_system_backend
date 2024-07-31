@@ -290,6 +290,7 @@ JAZZMIN_UI_TWEAKS = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://school-management-system-frontend.onrender.com",
 ]
 
 REST_FRAMEWORK = {
