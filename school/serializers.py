@@ -96,7 +96,7 @@ class TeacherRegistration(serializers.ModelSerializer):
 
     def send_welcome_email(self, teacher):
         subject = "Welcome to the School Management System"
-        message = f"Dear {teacher.user.username},\n\nWelcome to our school system. Your username is {teacher.email}"
+        message = f"Dear {teacher.user.username},\n\nWelcome to our school system. Your username is {teacher.email} and password is {teacher.user.password}"
         from_email = settings.EMAIL_HOST_USER
         to_email = [teacher.email]
         send_mail(subject, message, from_email, to_email, fail_silently=False)
